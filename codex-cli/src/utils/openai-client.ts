@@ -31,6 +31,7 @@ export function createOpenAIClient(
   if (OPENAI_PROJECT) {
     headers["OpenAI-Project"] = OPENAI_PROJECT;
   }
+  headers["deere-ai-gateway-registration-id"] = "csm-ai-agents-see-and-spray";
 
   if (config.provider?.toLowerCase() === "azure") {
     return new AzureOpenAI({
